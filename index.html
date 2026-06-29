@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transgold Freightways Ltd. | Premium Logistics & Freight Transport Canada</title>
+  <meta name="description" content="Transgold Freightways Ltd. is a premium Canadian carrier specializing in LTL, TL, Rush, Calgary Overnight, and GTA Team services. Safety certified, fully insured ($5M), and technology-forward.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header id="main-header" class="header-nav">
+    <div class="container nav-container">
+      <a href="#" class="logo-link" aria-label="Transgold Freightways Home">
+        <!-- Modernized inline SVG logo based on golden shield and wings -->
+        <svg class="logo-svg" viewBox="0 0 100 100" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background Shield -->
+          <path d="M50,10 L85,25 L80,60 C75,80 50,92 50,92 C50,92 25,80 20,60 L15,25 Z" fill="#111" stroke="#D4AF37" stroke-width="3"/>
+          <!-- Shield Border/Detail -->
+          <path d="M50,15 L80,28 L76,58 C72,75 50,86 50,86 C50,86 28,75 24,58 L20,28 Z" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6"/>
+          <!-- Wings Left -->
+          <path d="M22,35 C10,38 2,48 5,58 C8,62 18,58 24,52 Z" fill="#C52B2B"/>
+          <path d="M20,43 C8,48 4,56 8,64 C12,68 20,60 22,54 Z" fill="#D4AF37"/>
+          <!-- Wings Right -->
+          <path d="M78,35 C90,38 98,48 95,58 C92,62 82,58 76,52 Z" fill="#C52B2B"/>
+          <path d="M80,43 C92,48 96,56 92,64 C88,68 80,60 78,54 Z" fill="#D4AF37"/>
+          <!-- Semi Truck Front Profile -->
+          <path d="M38,55 L62,55 L62,65 L38,65 Z" fill="#D4AF37"/> <!-- Grill -->
+          <path d="M40,55 L42,38 L58,38 L60,55 Z" fill="#222" stroke="#D4AF37" stroke-width="2"/> <!-- Cab -->
+          <rect x="44" y="42" width="12" height="7" rx="1" fill="#FFD700"/> <!-- Windshield -->
+          <line x1="42" y1="36" x2="42" y2="28" stroke="#D4AF37" stroke-width="2"/> <!-- Exhaust Stack Left -->
+          <line x1="58" y1="36" x2="58" y2="28" stroke="#D4AF37" stroke-width="2"/> <!-- Exhaust Stack Right -->
+          <circle cx="36" cy="68" r="4" fill="#333" stroke="#D4AF37" stroke-width="1.5"/> <!-- Wheel Left -->
+          <circle cx="64" cy="68" r="4" fill="#333" stroke="#D4AF37" stroke-width="1.5"/> <!-- Wheel Right -->
+          <rect x="42" y="58" width="16" height="6" fill="#111"/> <!-- Grate bars -->
+        </svg>
+        <div class="logo-text">
+          <span class="brand-title">TRANSGOLD</span>
+          <span class="brand-subtitle">FREIGHTWAYS</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-item">Services</a></li>
+          <li><a href="#credentials" class="nav-item">Compliance & Trust</a></li>
+          <li><a href="#network" class="nav-item">Our Lanes</a></li>
+          <li><a href="#quote-section" class="btn btn-outline nav-cta-btn">Get a Quote</a></li>
+          <li><a href="#ai-portal" class="btn btn-primary nav-ai-btn"><i class="fa-solid fa-microchip"></i> AI Labs</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-glow"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge hero-badge"><span class="badge-dot"></span> Canada-Wide Logistics</div>
+        <h1 class="hero-title">Precision Logistics.<br><span class="gradient-text">Gold Standard</span> Service.</h1>
+        <p class="hero-subtitle">
+          Reliable LTL, TL, Overnight, and Team transport across Canada. Operating under strict compliance with a modern fleet, $5,000,000 in liability coverage, and preparing the foundation for future AI freight automation.
+        </p>
+        <div class="hero-actions">
+          <a href="#quote-section" class="btn btn-primary btn-large">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#credentials" class="btn btn-secondary btn-large">View Certifications</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Canadian Owned</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">$5M</span>
+            <span class="stat-label">Liability Insured</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">11/18</span>
+            <span class="stat-label">Trucks & Trailers</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero_truck.png" alt="Transgold Freightways long-haul truck driving through scenic British Columbia at sunset" class="hero-img">
+          <div class="hero-image-overlay"></div>
+          <!-- Glassmorphic floating card -->
+          <div class="floating-info-card">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>NSC Safety Certified</h4>
+              <p>Carrier # 202-721-148</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Credential Banner (Ticker style) -->
+  <section class="ticker-section" id="credentials">
+    <div class="container">
+      <h2 class="section-title text-center text-small">Compliance & Operating Authority</h2>
+      <div class="credential-grid">
+        <div class="credential-card">
+          <span class="card-label">SCAC Code</span>
+          <span class="card-value">TJFT</span>
+        </div>
+        <div class="credential-card">
+          <span class="card-label">USDOT Number</span>
+          <span class="card-value">3525020</span>
+        </div>
+        <div class="credential-card">
+          <span class="card-label">MC Number</span>
+          <span class="card-value">1171435</span>
+        </div>
+        <div class="credential-card">
+          <span class="card-label">WCB Account</span>
+          <span class="card-value">200373744</span>
+        </div>
+        <div class="credential-card">
+          <span class="card-label">National Safety Code</span>
+          <span class="card-value">202-721-148</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance & Safety Section -->
+  <section class="compliance-section">
+    <div class="container grid grid-2">
+      <div>
+        <div class="badge badge-gold"><i class="fa-solid fa-circle-check"></i> Security & Peace of Mind</div>
+        <h2 class="section-title">Fully Insured & Certified for Heavy Haul</h2>
+        <p class="section-desc">
+          We maintain top-tier industry coverage to ensure absolute protection for your valuable cargo. Shippers and brokers can coordinate loads with confidence, knowing our active policies are certified by Scott Road Insurance Services.
+        </p>
+        <ul class="compliance-list">
+          <li>
+            <div class="icon-circle"><i class="fa-solid fa-shield-heart"></i></div>
+            <div>
+              <strong>$5,000,000 Automobile Liability</strong>
+              <p>Underwritten by ICBC - coverage for all power units & trailers.</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle"><i class="fa-solid fa-building-shield"></i></div>
+            <div>
+              <strong>$5,000,000 Commercial General Liability</strong>
+              <p>Underwritten by Aviva Insurance Company of Canada.</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle"><i class="fa-solid fa-box-open"></i></div>
+            <div>
+              <strong>$250,000 Motor Truck Cargo Limit</strong>
+              <p>Comprehensive coverage for general consumer goods and high-value mall deliveries.</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div>
+              <strong>$100,000 Trailer Interchange Coverage</strong>
+              <p>Physical damage insurance covering interchange and non-owned trailers.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="compliance-visual">
+        <div class="glass-panel cert-display">
+          <div class="cert-header">
+            <i class="fa-solid fa-file-contract gold-icon"></i>
+            <div>
+              <h3>Active Insurance Verification</h3>
+              <p>Verified Policies - 2026/2027</p>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-row">
+              <span>General Liability</span>
+              <span class="badge badge-green">CAD $5,000,000</span>
+            </div>
+            <div class="cert-row">
+              <span>Auto Liability (CSL)</span>
+              <span class="badge badge-green">CAD $5,000,000</span>
+            </div>
+            <div class="cert-row">
+              <span>Cargo Coverage</span>
+              <span class="badge">CAD $250,000</span>
+            </div>
+            <div class="cert-row">
+              <span>Trailer Interchange</span>
+              <span class="badge">CAD $100,000</span>
+            </div>
+            <div class="cert-row">
+              <span>WCB BC Status</span>
+              <span class="badge badge-green"><i class="fa-solid fa-circle-check"></i> Active</span>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <p class="text-muted"><i class="fa-solid fa-lock"></i> Secured via Scott Road Insurance Services Ltd.</p>
+          </div>
+        </div>
+
+        <div class="carrier-philosophy-card">
+          <h4>Our Core Philosophy</h4>
+          <blockquote class="philosophy-quote">
+            "If we can't do it, we won't take it."
+          </blockquote>
+          <cite>— Sandeep Kaler, President</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="text-center max-w-700">
+        <div class="badge badge-gold">What We Do</div>
+        <h2 class="section-title">Specialized Transport Services</h2>
+        <p class="section-desc">
+          Operating a fleet of 11 modern tractors and 18 high-capacity 53-foot dry van trailers, we transport consumer products and retail cargo across Canada.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- LTL Service -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <h3>LTL (Less-Than-Truckload)</h3>
+          <p>Cost-effective consolidation for smaller shipments. We coordinate freight from multiple shippers to ensure optimized routing and delivery timelines.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check gold"></i> Regular departures</li>
+            <li><i class="fa-solid fa-check gold"></i> Tailored freight consolidation</li>
+            <li><i class="fa-solid fa-check gold"></i> Retail & mall distributions</li>
+          </ul>
+        </div>
+
+        <!-- FTL Service -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-truck-moving"></i></div>
+          <h3>TL (Full Truckload)</h3>
+          <p>Dedicated dry van capacity for volume shipments. Point-to-point transit ensuring your goods travel securely without cross-dock delays.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check gold"></i> 53-foot clean dry vans</li>
+            <li><i class="fa-solid fa-check gold"></i> Direct shipper-to-receiver lane</li>
+            <li><i class="fa-solid fa-check gold"></i> Sealed security protocols</li>
+          </ul>
+        </div>
+
+        <!-- Calgary Overnight -->
+        <div class="service-card highlighted-card">
+          <div class="popular-tag">Fast Transit</div>
+          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Overnight to Calgary</h3>
+          <p>Daily express service connecting British Columbia directly to Calgary and Rockyview, AB. Ideal for time-sensitive cargo and hot shipments.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check gold"></i> Guaranteed next-day arrival</li>
+            <li><i class="fa-solid fa-check gold"></i> Express route execution</li>
+            <li><i class="fa-solid fa-check gold"></i> Real-time dispatch tracking</li>
+          </ul>
+        </div>
+
+        <!-- GTA Team Service -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>GTA Team Service</h3>
+          <p>Dual-driver expedited transit lines to and from the Greater Toronto Area (GTA). Continuous movement keeps trucks on the road for rapid cross-country delivery.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check gold"></i> Non-stop transit operations</li>
+            <li><i class="fa-solid fa-check gold"></i> Rapid transit BC-AB-ON</li>
+            <li><i class="fa-solid fa-check gold"></i> Premium team dispatching</li>
+          </ul>
+        </div>
+
+        <!-- Rush Service -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <h3>Rush & Hot Shot</h3>
+          <p>Critical, high-priority cargo services. Immediate dispatch to handle unexpected supply chain delays or tight manufacturing deadlines.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check gold"></i> On-demand dispatching</li>
+            <li><i class="fa-solid fa-check gold"></i> Direct dedicated routing</li>
+            <li><i class="fa-solid fa-check gold"></i> Priority terminal access</li>
+          </ul>
+        </div>
+
+        <!-- Future AI Intake -->
+        <div class="service-card tech-card">
+          <div class="tech-tag">Innovation</div>
+          <div class="service-icon"><i class="fa-solid fa-brain-circuit"></i></div>
+          <h3>Smart AI Logistics</h3>
+          <p>We are laying the foundation for AI integrations, enabling automated quote generation, scheduling optimization, and rapid shipment tracking responses.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-microchip gold"></i> Simulated AI agent tools</li>
+            <li><i class="fa-solid fa-microchip gold"></i> Automated rate calculator</li>
+            <li><i class="fa-solid fa-microchip gold"></i> Instant digital intake</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transit Lane & Network Section -->
+  <section id="network" class="network-section">
+    <div class="container grid grid-1-1">
+      <div>
+        <div class="badge badge-gold">Lanes & Expansion</div>
+        <h2 class="section-title">Our Transit Corridor & Hub Network</h2>
+        <p class="section-desc">
+          Transgold operates primary corridors connecting **British Columbia to Alberta** and **Ontario to Alberta & British Columbia**. Hover over the map nodes to explore our active hubs and our strategic 3-5 year expansion targets.
+        </p>
+        
+        <div class="hub-info-display glass-panel" id="hub-info-panel">
+          <h4 id="hub-title">Delta Headquarters (BC)</h4>
+          <p id="hub-details">Main operations office, driver staging yard, and consolidation terminal for Western Canada. Located in Delta, BC.</p>
+          <div class="hub-status-container">
+            <span class="hub-status-label">Status:</span>
+            <span id="hub-status" class="badge badge-green">Operational Hub</span>
+          </div>
+        </div>
+
+        <div class="expansion-vision">
+          <h4>Strategic 3-5 Year Expansion Plan</h4>
+          <p>Expanding cross-docking capacities and local fleet distribution terminals in the following major commercial logistics nodes:</p>
+          <div class="expansion-tags">
+            <span class="tag"><i class="fa-solid fa-location-dot gold"></i> Delta, BC</span>
+            <span class="tag"><i class="fa-solid fa-location-dot gold"></i> Kelowna / Kamloops, BC</span>
+            <span class="tag"><i class="fa-solid fa-location-dot gold"></i> Rockyview / Calgary, AB</span>
+            <span class="tag"><i class="fa-solid fa-location-dot gold"></i> Edmonton, AB</span>
+            <span class="tag"><i class="fa-solid fa-location-dot gold"></i> Greater Toronto Area, ON</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-visual">
+        <div class="map-container glass-panel">
+          <svg id="canada-routes-map" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+            <!-- Simplified Canada boundary SVG paths representation -->
+            <path class="canada-base-map" d="M50,150 L100,100 L150,120 L200,90 L250,110 L300,100 L350,140 L400,120 L450,150 L500,110 L550,130 L600,180 L650,140 L700,150 L750,220 L720,280 L760,320 L700,340 L650,300 L600,280 L520,320 L480,310 L440,330 L380,350 L320,350 L260,340 L200,340 L150,330 L90,320 L80,240 Z" fill="#181a1b" stroke="#333" stroke-width="2"/>
+            
+            <!-- Route Lines (Lanes) -->
+            <!-- BC to Alberta Lane -->
+            <path class="route-path active-route" d="M120,300 Q160,280 200,270" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="8 4"/>
+            <!-- Ontario to AB / BC Lane -->
+            <path class="route-path active-route" d="M550,320 Q370,260 200,270" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="8 4"/>
+            <path class="route-path active-route" d="M550,320 Q330,220 120,300" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="6 6" opacity="0.7"/>
+            <!-- Future Expansion lanes -->
+            <path class="route-path future-route" d="M120,300 L150,275" stroke="#C52B2B" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.6"/>
+            <path class="route-path future-route" d="M200,270 L210,240" stroke="#C52B2B" stroke-width="2" fill="none" stroke-dasharray="4 4" opacity="0.6"/>
+
+            <!-- Hub Nodes -->
+            <!-- Delta Hub (HQ) -->
+            <g class="map-node active-node" data-hub="delta" transform="translate(120, 300)">
+              <circle r="12" fill="rgba(212, 175, 55, 0.2)" class="pulse-ring"/>
+              <circle r="6" fill="#D4AF37"/>
+            </g>
+            
+            <!-- Kelowna/Kamloops Node -->
+            <g class="map-node active-node" data-hub="kelowna-kamloops" transform="translate(150, 275)">
+              <circle r="8" fill="rgba(212, 175, 55, 0.2)" class="pulse-ring-slow"/>
+              <circle r="4" fill="#D4AF37"/>
+            </g>
+
+            <!-- Calgary/Rockyview Hub -->
+            <g class="map-node active-node" data-hub="calgary" transform="translate(200, 270)">
+              <circle r="12" fill="rgba(212, 175, 55, 0.2)" class="pulse-ring"/>
+              <circle r="6" fill="#D4AF37"/>
+            </g>
+
+            <!-- Edmonton Hub -->
+            <g class="map-node active-node" data-hub="edmonton" transform="translate(210, 240)">
+              <circle r="8" fill="rgba(212, 175, 55, 0.2)" class="pulse-ring-slow"/>
+              <circle r="4" fill="#D4AF37"/>
+            </g>
+
+            <!-- GTA Hub -->
+            <g class="map-node active-node" data-hub="gta" transform="translate(550, 320)">
+              <circle r="12" fill="rgba(212, 175, 55, 0.2)" class="pulse-ring"/>
+              <circle r="6" fill="#D4AF37"/>
+            </g>
+
+            <!-- Map Labels -->
+            <text x="120" y="325" class="map-label">Delta (HQ)</text>
+            <text x="140" y="260" class="map-label label-sub">Kelowna/Kamloops</text>
+            <text x="195" y="292" class="map-label">Rockyview/Calgary</text>
+            <text x="215" y="230" class="map-label">Edmonton</text>
+            <text x="550" y="345" class="map-label">GTA Terminal</text>
+            
+            <text x="320" y="380" class="map-label-route">Core Corridor: BC - AB - ON</text>
+          </svg>
+          <div class="map-legend">
+            <div class="legend-item"><span class="dot gold-dot"></span> Active Operations Hub</div>
+            <div class="legend-item"><span class="dot red-dot"></span> Planned Expansion Hub</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section id="quote-section" class="quote-section">
+    <div class="container max-w-800">
+      <div class="text-center">
+        <div class="badge badge-gold">Intake Center</div>
+        <h2 class="section-title">Request a Freight Quote</h2>
+        <p class="section-desc">Complete our interactive shipping form. Our logistics team will review capacity and provide details shortly.</p>
+      </div>
+
+      <!-- Progressive Form -->
+      <div class="quote-form-container glass-panel">
+        <!-- Progress Steps -->
+        <div class="form-steps">
+          <div class="step-indicator active-step" data-step="1">
+            <span class="step-num">1</span>
+            <span class="step-text">Service</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" data-step="2">
+            <span class="step-num">2</span>
+            <span class="step-text">Route</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" data-step="3">
+            <span class="step-num">3</span>
+            <span class="step-text">Cargo</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" data-step="4">
+            <span class="step-num">4</span>
+            <span class="step-text">Contact</span>
+          </div>
+        </div>
+
+        <form id="freight-quote-form" novalidate>
+          <!-- Step 1: Service Type -->
+          <div class="form-step-panel active-panel" id="step-panel-1">
+            <h3>Select Shipping Service</h3>
+            <div class="service-picker-grid">
+              <label class="picker-card">
+                <input type="radio" name="service_type" value="LTL" checked>
+                <div class="picker-content">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                  <h4>LTL</h4>
+                  <p>Less Than Truckload consolidation</p>
+                </div>
+              </label>
+
+              <label class="picker-card">
+                <input type="radio" name="service_type" value="TL">
+                <div class="picker-content">
+                  <i class="fa-solid fa-truck-moving"></i>
+                  <h4>Full Truckload</h4>
+                  <p>Dedicated dry van transport</p>
+                </div>
+              </label>
+
+              <label class="picker-card">
+                <input type="radio" name="service_type" value="Overnight">
+                <div class="picker-content">
+                  <i class="fa-solid fa-bolt"></i>
+                  <h4>Overnight Calgary</h4>
+                  <p>Express next-day delivery</p>
+                </div>
+              </label>
+
+              <label class="picker-card">
+                <input type="radio" name="service_type" value="Team">
+                <div class="picker-content">
+                  <i class="fa-solid fa-users"></i>
+                  <h4>GTA Team</h4>
+                  <p>Continuous expedited transit</p>
+                </div>
+              </label>
+            </div>
+            
+            <div class="form-actions">
+              <div></div> <!-- empty spacer -->
+              <button type="button" class="btn btn-primary next-step-btn">Next Step <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 2: Route Details -->
+          <div class="form-step-panel" id="step-panel-2">
+            <h3>Origin & Destination</h3>
+            <div class="grid grid-2 gap-md">
+              <div class="input-group">
+                <label for="origin_city">Origin City *</label>
+                <input type="text" id="origin_city" name="origin_city" placeholder="e.g. Delta" required>
+                <span class="error-msg">Please enter an origin city.</span>
+              </div>
+              <div class="input-group">
+                <label for="origin_province">Origin Province *</label>
+                <select id="origin_province" name="origin_province" required>
+                  <option value="">Select Province</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="AB">Alberta</option>
+                  <option value="ON">Ontario</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="MB">Manitoba</option>
+                </select>
+                <span class="error-msg">Please select origin province.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-md margin-top-sm">
+              <div class="input-group">
+                <label for="dest_city">Destination City *</label>
+                <input type="text" id="dest_city" name="dest_city" placeholder="e.g. Calgary" required>
+                <span class="error-msg">Please enter a destination city.</span>
+              </div>
+              <div class="input-group">
+                <label for="dest_province">Destination Province *</label>
+                <select id="dest_province" name="dest_province" required>
+                  <option value="">Select Province</option>
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="ON">Ontario</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="MB">Manitoba</option>
+                </select>
+                <span class="error-msg">Please select destination province.</span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary prev-step-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+              <button type="button" class="btn btn-primary next-step-btn">Next Step <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 3: Cargo Details -->
+          <div class="form-step-panel" id="step-panel-3">
+            <h3>Shipment Specifications</h3>
+            <div class="grid grid-2 gap-md">
+              <div class="input-group">
+                <label for="commodity">Commodity Type *</label>
+                <select id="commodity" name="commodity" required>
+                  <option value="General Consumer Goods">General Consumer Goods</option>
+                  <option value="Mall Deliveries / Retail">Mall Deliveries / Retail</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Industrial Equipment">Industrial Equipment</option>
+                  <option value="Other">Other Goods</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="weight">Estimated Cargo Weight (lbs) *</label>
+                <input type="number" id="weight" name="weight" placeholder="e.g. 15000" min="1" required>
+                <span class="error-msg">Enter a valid weight in lbs.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-md margin-top-sm">
+              <div class="input-group">
+                <label for="skid_count">Pallet / Skid Count</label>
+                <input type="number" id="skid_count" name="skid_count" placeholder="e.g. 10" min="1">
+              </div>
+              <div class="input-group">
+                <label for="special_needs">Special Handling Instructions</label>
+                <textarea id="special_needs" name="special_needs" placeholder="e.g. Liftgate required, appointment delivery..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary prev-step-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+              <button type="button" class="btn btn-primary next-step-btn">Next Step <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 4: Contact Information -->
+          <div class="form-step-panel" id="step-panel-4">
+            <h3>Contact Details</h3>
+            <div class="grid grid-2 gap-md">
+              <div class="input-group">
+                <label for="company_name">Company Name *</label>
+                <input type="text" id="company_name" name="company_name" placeholder="e.g. Acme Corp" required>
+                <span class="error-msg">Company name is required.</span>
+              </div>
+              <div class="input-group">
+                <label for="contact_name">Contact Person *</label>
+                <input type="text" id="contact_name" name="contact_name" placeholder="e.g. Jane Doe" required>
+                <span class="error-msg">Contact name is required.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-md margin-top-sm">
+              <div class="input-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 604-555-0199" required autocomplete="tel">
+                <span class="error-msg">Enter a valid phone number.</span>
+              </div>
+              <div class="input-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="e.g. shipping@acme.com" required autocomplete="email">
+                <span class="error-msg">Enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary prev-step-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+              <button type="submit" class="btn btn-primary submit-btn" id="submit-quote-btn">Submit Request <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Labs Simulator Section -->
+  <section id="ai-portal" class="ai-section">
+    <div class="container grid grid-1-1">
+      <div class="ai-visual-panel">
+        <div class="chatbot-window glass-panel">
+          <div class="chatbot-header">
+            <div class="chatbot-avatar">
+              <svg viewBox="0 0 100 100" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#D4AF37"/>
+                <path d="M30,45 Q50,20 70,45 Q50,70 30,45 Z" fill="#111"/>
+                <circle cx="42" cy="42" r="3" fill="#D4AF37"/>
+                <circle cx="58" cy="42" r="3" fill="#D4AF37"/>
+                <line x1="42" y1="52" x2="58" y2="52" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="chatbot-header-text">
+              <h3>Transgold AI Dispatch</h3>
+              <p><span class="online-indicator"></span> Operational Preview</p>
+            </div>
+            <div class="chatbot-controls">
+              <span class="control-dot"></span>
+              <span class="control-dot"></span>
+            </div>
+          </div>
+          
+          <div class="chatbot-messages" id="chat-messages">
+            <!-- Simulated Initial message -->
+            <div class="chat-message bot-message">
+              <div class="msg-bubble">
+                Hello! I am the **Transgold AI Dispatch Assistant** (Preview). I can help answer questions about our routes, equipment compliance, or simulate a freight track! 
+                <br><br>
+                Try clicking one of the quick prompts below or type your inquiry.
+              </div>
+            </div>
+          </div>
+
+          <div class="chatbot-quick-prompts">
+            <button class="quick-btn" data-query="Track Shipment TG-9982">Track TG-9982</button>
+            <button class="quick-btn" data-query="What equipment do you have?">Show Fleet Equipment</button>
+            <button class="quick-btn" data-query="Calculate transit BC to Calgary">BC to Calgary Transit</button>
+          </div>
+
+          <div class="chatbot-input-container">
+            <input type="text" id="chat-input" placeholder="Ask about routes, rates, or status..." aria-label="Type message to AI Dispatch">
+            <button id="send-chat-btn" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-intro-content">
+        <div class="badge badge-gold"><i class="fa-solid fa-microchip"></i> Future Technology Roadmap</div>
+        <h2 class="section-title">Integrating AI into Operations</h2>
+        <p class="section-desc">
+          Transgold is preparing the technology infrastructure to integrate advanced artificial intelligence directly into the dispatch and customer support pipeline.
+        </p>
+        <p>
+          In the future, our AI modules will enable automated ratecons intake, load scheduling, and 24/7 shipment tracking updates for brokers and drivers alike, reducing response times to seconds.
+        </p>
+        
+        <div class="tech-stack-row">
+          <div class="tech-pill">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Instant Quote Intake</span>
+          </div>
+          <div class="tech-pill">
+            <i class="fa-solid fa-route"></i>
+            <span>Dynamic Route Dispatch</span>
+          </div>
+          <div class="tech-pill">
+            <i class="fa-solid fa-message-captions"></i>
+            <span>Broker Chat Integration</span>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <strong>Interactive Demo:</strong> Use the chat window on the left to interact with our simulated AI dispatcher. It leverages active company compliance data, fleet specs (11 trucks, 18 trailers), and transit lane parameters to generate immediate answers.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 100 100" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,10 L85,25 L80,60 C75,80 50,92 50,92 C50,92 25,80 20,60 L15,25 Z" fill="#111" stroke="#D4AF37" stroke-width="3"/>
+            <path d="M38,55 L62,55 L62,65 L38,65 Z" fill="#D4AF37"/>
+            <path d="M40,55 L42,38 L58,38 L60,55 Z" fill="#222" stroke="#D4AF37" stroke-width="2"/>
+            <circle cx="36" cy="68" r="4" fill="#333" stroke="#D4AF37" stroke-width="1.5"/>
+            <circle cx="64" cy="68" r="4" fill="#333" stroke="#D4AF37" stroke-width="1.5"/>
+          </svg>
+          <div class="logo-text">
+            <span class="brand-title">TRANSGOLD</span>
+            <span class="brand-subtitle">FREIGHTWAYS</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Transgold Freightways Ltd. provides premium dry van freight transportation across Western Canada and the GTA. Delivering on trust, safety, and operational excellence.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a href="#services">Freight Services</a></li>
+          <li><a href="#credentials">Insurance & Compliance</a></li>
+          <li><a href="#network">Lanes & Terminal map</a></li>
+          <li><a href="#quote-section">Request Quote</a></li>
+          <li><a href="#ai-portal">AI Dispatch Simulator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Logistics</h3>
+        <p><i class="fa-solid fa-phone gold"></i> <strong>Office:</strong> <a href="tel:604-800-1088">604-800-1088 Ext 101</a></p>
+        <p><i class="fa-solid fa-mobile-screen-button gold"></i> <strong>Direct Cell:</strong> <a href="tel:778-990-7908">778-990-7908</a></p>
+        <p><i class="fa-solid fa-envelope gold"></i> <strong>General:</strong> <a href="mailto:Info@transgoldfreight.com">Info@transgoldfreight.com</a></p>
+        <p><i class="fa-solid fa-envelope-open-text gold"></i> <strong>President:</strong> <a href="mailto:Sandeep@transgoldfreight.com">Sandeep@transgoldfreight.com</a></p>
+      </div>
+
+      <div class="footer-address">
+        <h3>Locations</h3>
+        <p><i class="fa-solid fa-location-dot gold"></i> <strong>Operational Yard:</strong><br>
+        103-8300 River Rd, Delta BC V4G 0A2</p>
+        <p><i class="fa-solid fa-map-location-dot gold"></i> <strong>Registered Mail:</strong><br>
+        108-6951 72nd St, Delta BC V4G 0A2</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p class="copyright">&copy; 2026 Transgold Freightways Ltd. All Rights Reserved. Scheduled authorities DOT# 3525020 | MC# 1171435 | SCAC TJFT.</p>
+        <p class="legal-links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Native Dialog for Quote Success Message -->
+  <dialog id="quote-success-dialog" class="success-dialog-modal">
+    <div class="success-dialog-content">
+      <div class="success-icon-wrapper">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2>Quote Request Received</h2>
+      <p>Thank you! Your shipping request has been submitted to the Transgold logistics desk.</p>
+      
+      <div class="request-summary-box">
+        <p><strong>Service:</strong> <span id="summary-service">-</span></p>
+        <p><strong>Route:</strong> <span id="summary-route">-</span></p>
+        <p><strong>Pallets:</strong> <span id="summary-pallets">-</span></p>
+        <p><strong>Broker Reference ID:</strong> <span id="summary-ref-id" class="gold font-mono">-</span></p>
+      </div>
+
+      <p class="note-text"><i class="fa-solid fa-robot"></i> Simulated AI Dispatch has pre-routed your shipment coordinates for review.</p>
+      
+      <form method="dialog" class="modal-form-close">
+        <button type="submit" class="btn btn-primary">Close and Return</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Script links -->
+  <script src="app.js"></script>
+</body>
+</html>
