@@ -2,29 +2,29 @@
 
 /* Variables / Design Tokens */
 :root {
-  --bg-primary: #0a0b0d;
-  --bg-secondary: #121417;
-  --bg-tertiary: #191c21;
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f3f5;
   
-  --color-gold: #d4af37;
-  --color-gold-hover: #e5be49;
-  --color-gold-glow: rgba(212, 175, 55, 0.25);
-  --color-gold-light: #ffd700;
+  --color-gold: #c59b27; /* Darker gold for accessibility on white */
+  --color-gold-hover: #b0871b;
+  --color-gold-glow: rgba(197, 155, 39, 0.12);
+  --color-gold-light: #d4af37;
   
   --color-red: #c52b2b;
   --color-red-hover: #dc3939;
-  --color-red-glow: rgba(197, 43, 43, 0.2);
+  --color-red-glow: rgba(197, 43, 43, 0.08);
   
-  --text-main: #f1f3f5;
-  --text-muted: #9da5b4;
+  --text-main: #1a1d20;
+  --text-muted: #5e6675;
   --text-dark: #0f1115;
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-gold: rgba(212, 175, 55, 0.2);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-gold: rgba(197, 155, 39, 0.12);
   
-  --glass-bg: rgba(18, 20, 23, 0.75);
-  --glass-border: rgba(212, 175, 55, 0.15);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(197, 155, 39, 0.12);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
   
   --font-title: 'Outfit', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -193,7 +193,8 @@ a {
 }
 
 .btn-secondary:hover {
-  background: #21252c;
+  background: var(--bg-primary);
+  color: var(--color-gold);
   border-color: var(--color-gold);
   transform: translateY(-2px);
 }
@@ -242,9 +243,10 @@ a {
 
 .header-nav.shrink {
   height: 70px;
-  background: rgba(10, 11, 13, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 .nav-container {
@@ -343,7 +345,7 @@ a {
   padding: 0.5rem 1.2rem;
   font-size: 0.85rem;
   border-radius: 6px;
-  background: linear-gradient(135deg, var(--bg-tertiary) 0%, #1e2430 100%);
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
   border: 1px solid var(--border-gold);
   color: var(--color-gold);
   box-shadow: 0 0 10px var(--color-gold-glow);
@@ -488,11 +490,11 @@ a {
   align-items: center;
   gap: 1rem;
   padding: 1.2rem;
-  background: rgba(18, 20, 23, 0.85);
+  background: var(--glass-bg);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border-gold);
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: var(--glass-shadow);
 }
 
 .floating-info-card .card-icon {
@@ -1007,8 +1009,8 @@ a {
 }
 
 .canada-base-map {
-  fill: #14171d;
-  stroke: #252830;
+  fill: #e9ecef;
+  stroke: #dee2e6;
   stroke-width: 1.5;
   transition: fill var(--transition-smooth);
 }
@@ -1072,7 +1074,7 @@ a {
   fill: var(--text-main);
   text-anchor: middle;
   pointer-events: none;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+  filter: none;
 }
 
 .label-sub {
@@ -1507,7 +1509,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: rgba(10, 11, 13, 0.3);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .chat-message {
@@ -1574,7 +1576,7 @@ a {
   display: flex;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
-  background: rgba(10, 11, 13, 0.4);
+  background: rgba(0, 0, 0, 0.04);
   border-top: 1px solid var(--border-subtle);
   overflow-x: auto;
   white-space: nowrap;
