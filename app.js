@@ -387,6 +387,7 @@ function initAIChatbot() {
       return `**Transgold Operational Fleet Specifications:**
       - **Tractors:** 11 modern, fully registered power units.
       - **Trailers:** 18 total trailers, specializing in **53-foot dry vans**.
+      - **Technology:** Fully equipped with real-time GPS tracking and EDI integration capabilities.
       - **Compliance:** Multi-jurisdiction IFTA licensed, SCAC (TJFT), USDOT (3525020) and MC (1171435) compliant.`;
     }
 
@@ -401,6 +402,7 @@ function initAIChatbot() {
     if (lower.includes("gta") || lower.includes("toronto") || lower.includes("team")) {
       return `Our **GTA Team Service** features two drivers operating in continuous rotation.
       - **Average Transit Time:** 60-70 hours between Delta, BC/Calgary and the Greater Toronto Area.
+      - **Technology:** 100% GPS tracked with real-time updates and EDI logistics integration.
       - **Security:** Monitored cargo locks and constant GPS geo-fencing.`;
     }
 
@@ -413,8 +415,8 @@ function initAIChatbot() {
     // Compliance / Insurance / Address
     if (lower.includes("insurance") || lower.includes("liability") || lower.includes("insured")) {
       return `**Transgold Insurance & Liability Profile:**
-      - **Auto Liability:** $5,000,000 CAD (ICBC policy).
-      - **General Liability:** $5,000,000 CAD (Aviva policy).
+      - **Auto Liability:** $10,000,000 CAD (ICBC policy).
+      - **General Liability:** $10,000,000 CAD (Aviva policy).
       - **Cargo Limit:** $250,000 CAD.
       - **Trailer Interchange:** $100,000 CAD.
       - Verified through Scott Road Insurance Services.`;
