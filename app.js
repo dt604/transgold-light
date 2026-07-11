@@ -152,10 +152,9 @@ function initQuoteForm() {
 
   // Handle Form Submit
   form.addEventListener("submit", (e) => {
-    if (!validateStep(4)) {
-      e.preventDefault();
-      return;
-    }
+    e.preventDefault();
+
+    if (!validateStep(4)) return;
 
     const submitBtn = document.getElementById("submit-quote-btn");
     const originalText = submitBtn.innerHTML;
@@ -163,6 +162,9 @@ function initQuoteForm() {
     // Simulate AI routing optimization and scheduling intake delay
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Analyzing Rates...`;
+
+    // Submit lead data to HubSpot Forms API
+    submitToHubSpot(form);
 
     setTimeout(() => {
       submitBtn.disabled = false;
@@ -190,6 +192,37 @@ function initQuoteForm() {
       goToStep(1);
     }, 1800);
   });
+
+  // Direct HubSpot Forms API submission
+  function submitToHubSpot(formEl) {
+    const portalId = "343435263";
+    const formGuid = "56b16492-6182-442e-9bee-e5db6101ff2d";
+
+    // Grab the HubSpot tracking cookie for visitor attribution
+    const hutk = document.cookie.replace(/(?:(?:^|.*;\s*)hubspotutk\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
+    const payload = {
+      fields: [
+        { name: "email", value: formEl.elements["email"].value },
+        { name: "firstname", value: formEl.elements["contact_name"].value.split(" ")[0] || "" },
+        { name: "lastname", value: formEl.elements["contact_name"].value.split(" ").slice(1).join(" ") || "" },
+        { name: "company", value: formEl.elements["company_name"].value },
+        { name: "phone", value: formEl.elements["phone"].value },
+        { name: "message", value: `Service: ${formEl.elements["service_type"].value} | Route: ${formEl.elements["origin_city"].value}, ${formEl.elements["origin_province"].value} → ${formEl.elements["dest_city"].value}, ${formEl.elements["dest_province"].value} | Commodity: ${formEl.elements["commodity"].value} | Weight: ${formEl.elements["weight"].value} lbs | Pallets: ${formEl.elements["skid_count"].value || "N/A"} | Notes: ${formEl.elements["special_needs"].value || "None"}` }
+      ],
+      context: {
+        hutk: hutk || undefined,
+        pageUri: window.location.href,
+        pageName: document.title
+      }
+    };
+
+    fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).catch(err => console.warn("HubSpot submission error:", err));
+  }
 
   function goToStep(stepNum) {
     // Hide all panels
