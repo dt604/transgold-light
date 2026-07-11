@@ -415,8 +415,8 @@ function initAIChatbot() {
     // Compliance / Insurance / Address
     if (lower.includes("insurance") || lower.includes("liability") || lower.includes("insured")) {
       return `**Transgold Insurance & Liability Profile:**
-      - **Auto Liability:** $10,000,000 CAD (ICBC policy).
-      - **General Liability:** $10,000,000 CAD (Aviva policy).
+      - **Auto Liability:** $5,000,000 CAD (ICBC policy).
+      - **General Liability:** $5,000,000 CAD (Aviva policy).
       - **Cargo Limit:** $250,000 CAD.
       - **Trailer Interchange:** $100,000 CAD.
       - Verified through Scott Road Insurance Services.`;

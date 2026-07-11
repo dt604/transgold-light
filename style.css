@@ -262,12 +262,12 @@ a {
   gap: 0.75rem;
 }
 
-.logo-svg {
-  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+.logo-svg, .logo-img {
   transition: transform var(--transition-smooth);
 }
 
-.logo-link:hover .logo-svg {
+.logo-link:hover .logo-svg,
+.logo-link:hover .logo-img {
   transform: scale(1.05) rotate(-2deg);
 }
 
