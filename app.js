@@ -152,9 +152,10 @@ function initQuoteForm() {
 
   // Handle Form Submit
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (!validateStep(4)) return;
+    if (!validateStep(4)) {
+      e.preventDefault();
+      return;
+    }
 
     const submitBtn = document.getElementById("submit-quote-btn");
     const originalText = submitBtn.innerHTML;
