@@ -208,7 +208,7 @@ function initQuoteForm() {
         { name: "lastname", value: formEl.elements["contact_name"].value.split(" ").slice(1).join(" ") || "" },
         { name: "company", value: formEl.elements["company_name"].value },
         { name: "phone", value: formEl.elements["phone"].value },
-        { name: "message", value: `Service: ${formEl.elements["service_type"].value} | Route: ${formEl.elements["origin_city"].value}, ${formEl.elements["origin_province"].value} → ${formEl.elements["dest_city"].value}, ${formEl.elements["dest_province"].value} | Commodity: ${formEl.elements["commodity"].value} | Weight: ${formEl.elements["weight"].value} lbs | Pallets: ${formEl.elements["skid_count"].value || "N/A"} | Notes: ${formEl.elements["special_needs"].value || "None"}` }
+        { name: "quote_details", value: `Service: ${formEl.elements["service_type"].value} | Route: ${formEl.elements["origin_city"].value}, ${formEl.elements["origin_province"].value} → ${formEl.elements["dest_city"].value}, ${formEl.elements["dest_province"].value} | Commodity: ${formEl.elements["commodity"].value} | Weight: ${formEl.elements["weight"].value} lbs | Pallets: ${formEl.elements["skid_count"].value || "N/A"} | Notes: ${formEl.elements["special_needs"].value || "None"}` }
       ],
       context: {
         hutk: hutk || undefined,
