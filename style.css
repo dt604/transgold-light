@@ -263,7 +263,11 @@ a {
 }
 
 .logo-svg, .logo-img {
-  transition: transform var(--transition-smooth);
+  transition: height var(--transition-fast), transform var(--transition-smooth);
+}
+
+.header-nav.shrink .logo-img {
+  height: 52px !important;
 }
 
 .logo-link:hover .logo-svg,
@@ -1711,11 +1715,13 @@ a {
 .footer-contact h3,
 .footer-address h3 {
   font-family: var(--font-title);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--text-main);
+  color: #ffffff; /* Crisp white contrast on dark footer background */
   position: relative;
   padding-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .footer-links h3::after,
@@ -1738,7 +1744,7 @@ a {
 }
 
 .footer-links a {
-  color: var(--text-muted);
+  color: #94a3b8; /* Clear readable link color */
 }
 
 .footer-links a:hover {
@@ -1748,17 +1754,22 @@ a {
 
 .footer-contact p,
 .footer-address p {
-  color: var(--text-muted);
+  color: #cbd5e1; /* High contrast light slate text */
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 
+.footer-contact p strong,
+.footer-address p strong {
+  color: #ffffff; /* High contrast white labels */
+}
+
 .footer-contact a {
-  color: var(--text-muted);
+  color: #cbd5e1;
 }
 
 .footer-contact a:hover {
-  color: var(--text-main);
+  color: #ffffff;
 }
 
 .footer-contact i.gold,
