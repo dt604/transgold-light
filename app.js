@@ -170,6 +170,36 @@ function initQuoteForm() {
         new Promise(resolve => setTimeout(resolve, 1800))
       ]);
 
+      // If Forms API succeeds, try to create the Deal via our secure serverless endpoint
+      try {
+        const dealPayload = {
+          email: form.elements["email"].value,
+          company: form.elements["company_name"].value,
+          serviceType: form.elements["service_type"].value,
+          origin: `${form.elements["origin_city"].value.trim()}, ${form.elements["origin_province"].value}`,
+          destination: `${form.elements["dest_city"].value.trim()}, ${form.elements["dest_province"].value}`,
+          commodity: form.elements["commodity"].value,
+          weight: form.elements["weight"].value ? `${form.elements["weight"].value} lbs` : "",
+          palletCount: form.elements["skid_count"].value || "",
+          specialInstructions: form.elements["special_needs"].value || ""
+        };
+
+        const dealResponse = await fetch('/api/create-freight-deal', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(dealPayload)
+        });
+
+        if (!dealResponse.ok) {
+          console.warn("Backend deal creation failed. Preserving contact.");
+        } else {
+          console.log("Deal successfully created or duplicate prevented.");
+        }
+      } catch (dealError) {
+        console.error("Error calling /api/create-freight-deal:", dealError);
+        // Do not throw here, we still want to show success to the user since the Contact was saved
+      }
+
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
 
