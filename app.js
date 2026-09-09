@@ -209,13 +209,27 @@ function initQuoteForm() {
     // Grab the HubSpot tracking cookie for visitor attribution
     const hutk = document.cookie.replace(/(?:(?:^|.*;\s*)hubspotutk\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
+    let serviceTypeVal = formEl.elements["service_type"].value;
+    if (serviceTypeVal === "TL") serviceTypeVal = "FTL";
+
+    const originVal = `${formEl.elements["origin_city"].value.trim()}, ${formEl.elements["origin_province"].value}`;
+    const destVal = `${formEl.elements["dest_city"].value.trim()}, ${formEl.elements["dest_province"].value}`;
+    const weightVal = formEl.elements["weight"].value ? `${formEl.elements["weight"].value} lbs` : "";
+
     const payload = {
       fields: [
         { name: "email", value: formEl.elements["email"].value },
         { name: "firstname", value: formEl.elements["contact_name"].value.split(" ")[0] || "" },
         { name: "lastname", value: formEl.elements["contact_name"].value.split(" ").slice(1).join(" ") || "" },
         { name: "company", value: formEl.elements["company_name"].value },
-        { name: "phone", value: formEl.elements["phone"].value }
+        { name: "phone", value: formEl.elements["phone"].value },
+        { name: "quote_service_type", value: serviceTypeVal },
+        { name: "quote_origin", value: originVal },
+        { name: "quote_destination", value: destVal },
+        { name: "quote_commodity", value: formEl.elements["commodity"].value },
+        { name: "quote_weight", value: weightVal },
+        { name: "quote_pallet_count", value: formEl.elements["skid_count"].value || "" },
+        { name: "quote_special_instructions", value: formEl.elements["special_needs"].value || "" }
       ],
       context: {
         hutk: hutk || undefined,
