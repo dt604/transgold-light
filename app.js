@@ -151,7 +151,7 @@ function initQuoteForm() {
   });
 
   // Handle Form Submit
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     if (!validateStep(4)) return;
@@ -163,10 +163,13 @@ function initQuoteForm() {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Analyzing Rates...`;
 
-    // Submit lead data to HubSpot Forms API
-    submitToHubSpot(form);
+    try {
+      // Run HubSpot submission and a minimum delay for the UI simultaneously
+      await Promise.all([
+        submitToHubSpot(form),
+        new Promise(resolve => setTimeout(resolve, 1800))
+      ]);
 
-    setTimeout(() => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
 
@@ -190,13 +193,18 @@ function initQuoteForm() {
       // Reset form and UI stepper
       form.reset();
       goToStep(1);
-    }, 1800);
+    } catch (error) {
+      // Revert button and show error, do not reset form
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      alert("We couldn't submit your quote request. Please try again or contact Transgold directly.");
+    }
   });
 
   // Direct HubSpot Forms API submission
-  function submitToHubSpot(formEl) {
+  async function submitToHubSpot(formEl) {
     const portalId = "343435263";
-    const formGuid = "56b16492-6182-442e-9bee-e5db6101ff2d";
+    const formGuid = "5d32dbb1-37d5-426f-9236-18f24b388d3e";
 
     // Grab the HubSpot tracking cookie for visitor attribution
     const hutk = document.cookie.replace(/(?:(?:^|.*;\s*)hubspotutk\s*=\s*([^;]*).*$)|^.*$/, "$1");
@@ -207,8 +215,7 @@ function initQuoteForm() {
         { name: "firstname", value: formEl.elements["contact_name"].value.split(" ")[0] || "" },
         { name: "lastname", value: formEl.elements["contact_name"].value.split(" ").slice(1).join(" ") || "" },
         { name: "company", value: formEl.elements["company_name"].value },
-        { name: "phone", value: formEl.elements["phone"].value },
-        { name: "quote_details", value: `Service: ${formEl.elements["service_type"].value} | Route: ${formEl.elements["origin_city"].value}, ${formEl.elements["origin_province"].value} → ${formEl.elements["dest_city"].value}, ${formEl.elements["dest_province"].value} | Commodity: ${formEl.elements["commodity"].value} | Weight: ${formEl.elements["weight"].value} lbs | Pallets: ${formEl.elements["skid_count"].value || "N/A"} | Notes: ${formEl.elements["special_needs"].value || "None"}` }
+        { name: "phone", value: formEl.elements["phone"].value }
       ],
       context: {
         hutk: hutk || undefined,
@@ -217,11 +224,20 @@ function initQuoteForm() {
       }
     };
 
-    fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
+    const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
-    }).catch(err => console.warn("HubSpot submission error:", err));
+    });
+
+    if (!response.ok) {
+      const errorBody = await response.text();
+      console.error(`HubSpot Error (Status ${response.status}):`, errorBody);
+      throw new Error(`HubSpot submission failed with status: ${response.status}`);
+    }
+
+    console.log("HubSpot submission successful! Status:", response.status);
+    return response;
   }
 
   function goToStep(stepNum) {
